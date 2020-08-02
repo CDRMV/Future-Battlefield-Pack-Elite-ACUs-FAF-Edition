@@ -21,3 +21,5 @@ Todos:
 - Add Missing Icons
 - Add AI Support
 - Add a Special Feature (FAF Version only)
+- Replace few Icons with new ones
+- Balance 
