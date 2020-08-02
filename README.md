@@ -9,3 +9,15 @@ Install Instructions:
 4) Rename the Folder Future-Battlefield-Pack-Elite-ACUs-FAF-Edition-master to Future Battlefield Pack Elite ACUs FAF Edition.
 5) Activate the Mod in the Mod manager
 6) Enjoy
+
+Known Issues:
+
+Aeon Combat ACU:
+- Personal Shieldeffects are Missing currently. 
+- However the Shieldupgrades and the Shield itself working well. 
+- This will be fixed in the next Update.
+
+Todos: 
+- Add Missing Icons
+- Add AI Support
+- Add a Special Feature (FAF Version only)
