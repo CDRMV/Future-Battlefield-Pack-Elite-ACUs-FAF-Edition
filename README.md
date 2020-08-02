@@ -17,7 +17,7 @@ Aeon Combat ACU:
 - However the Shieldupgrades and the Shield itself working well. 
 - This will be fixed in the next Update.
 
-Todos: 
+Todos before first Release: 
 - Add Missing Icons
 - Add AI Support
 - Add a Special Feature (FAF Version only)
