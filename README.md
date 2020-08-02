@@ -14,8 +14,7 @@ Known Issues:
 
 Aeon Combat ACU:
 - Personal Shieldeffects are Missing currently. 
-- However the Shieldupgrades and the Shield itself working well. 
-- This will be fixed in the next Update.
+- However the Shieldupgrades and the Shield itself are working in general. 
 
 Todos before first Release: 
 - Add Missing Icons
