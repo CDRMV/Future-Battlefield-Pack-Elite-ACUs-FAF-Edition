@@ -1,4 +1,4 @@
-# Future-Battlefield-Pack-Elite-ACUs-FAF-Edition
+# Future Battlefield Pack Elite ACUs (FAF Edition)
 'Future Battlefield Pack: Elite ACUS' is a Submod for F.B.P.:Legends It adds the ACU-HQ and three new ACU Classes into the Game. This is for the FAF Version of the Game.
 
 Install Instructions:
@@ -9,3 +9,16 @@ Install Instructions:
 4) Rename the Folder Future-Battlefield-Pack-Elite-ACUs-FAF-Edition-master to Future Battlefield Pack Elite ACUs FAF Edition.
 5) Activate the Mod in the Mod manager
 6) Enjoy
+
+Known Issues:
+
+Aeon Combat ACU:
+- Personal Shieldeffects are Missing currently. 
+- However the Shieldupgrades and the Shield itself are working in general. 
+
+Todos before first Release: 
+- Add Missing Icons
+- Add AI Support
+- Add a Special Feature (FAF Version only)
+- Replace few Icons with new ones
+- Balance 
