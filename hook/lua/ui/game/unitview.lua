@@ -4,13 +4,28 @@ if version < 3652 then -- All versions below 3652 don't have buildin global icon
 	LOG('Future Battlefield Pack Elite ACUs: [unitview.lua '..debug.getinfo(1).currentline..'] - Gameversion is older then 3652. Hooking "UpdateWindow" to add our own unit icons')
 
 local MyUnitIdTable = {
-   UAB0305=true, -- Origin of the Way - (Aeon: ACU-HQ)
-   UEB0305=true, -- Command Hangar - (UEF: ACU-HQ)
-   URB0305=true, -- Master-Hub - (Cybran: ACU-HQ)
-   XSB0305=true, -- Am-Sayasta - (Seraphim: ACU-HQ)
+   -- ACU HQ's --
+
+	UAB0305=true, -- Origin of the Way - (Aeon: ACU-HQ)
+	UEB0305=true, -- Command Hangar - (UEF: ACU-HQ)
+	URB0305=true, -- Master-Hub - (Cybran: ACU-HQ)
+	XSB0305=true, -- Am-Sayasta - (Seraphim: ACU-HQ)
+	XNB0305=true, -- Command Yard300 - (Nomads: ACU-HQ)
+   
+   -- Combat ACU's --
+   
+	UEL0002=true, -- UEF Combat ACU
+	URL0002=true, -- Cybran Combat ACU
+	UAL0002=true, -- Aeon Combat ACU
+	XSL0002=true, -- Seraphim Combat ACU
+	XNL0002=true, -- Nomads Combat ACU
+	
+	-- Nomads regular ACU --
+	
+	XNL0001b=true, -- Nomads ACU
 }
 
-	local IconPath = "/Mods/Future Battlefield Pack Elite ACUs"
+	local IconPath = "/mods/Future Battlefield Pack Elite ACUs FAF Edition"
 
 	local oldUpdateWindow = UpdateWindow
 	function UpdateWindow(info)
