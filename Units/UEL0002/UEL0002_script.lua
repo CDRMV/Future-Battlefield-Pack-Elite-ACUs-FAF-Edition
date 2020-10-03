@@ -89,14 +89,19 @@ UEL0002 = Class(ACUUnit) {
                     TDFRiotWeapon.PlayFxWeaponPackSequence(self)
                 end,
 		},
-		BackGatlingGun = Class(TDFRiotWeapon) {
+		L_GatlingGun = Class(TDFRiotWeapon) {
                 PlayFxWeaponUnpackSequence = function(self)
                     if not self.SpinManip then 
-                        self.SpinManip = CreateRotator(self.unit, 'Gatling_Rotate', 'z', nil, -270, -180, -60)
+                        self.SpinManip = CreateRotator(self.unit, 'L_Gatling_Rotate1', 'z', nil, -270, -180, -60)
                         self.unit.Trash:Add(self.SpinManip)
+						self.SpinManip2 = CreateRotator(self.unit, 'L_Gatling_Rotate2', 'z', nil, -270, -180, -60)
+						self.unit.Trash:Add(self.SpinManip2)
                     end
                     if self.SpinManip then
                         self.SpinManip:SetTargetSpeed(270)
+                    end
+					if self.SpinManip2 then
+                        self.SpinManip2:SetTargetSpeed(270)
                     end
                     TDFRiotWeapon.PlayFxWeaponUnpackSequence(self)
                 end,
@@ -105,12 +110,43 @@ UEL0002 = Class(ACUUnit) {
                     if self.SpinManip then
                         self.SpinManip:SetTargetSpeed(0)
                     end
+					if self.SpinManip2 then
+                        self.SpinManip2:SetTargetSpeed(0)
+                    end
+                    TDFRiotWeapon.PlayFxWeaponPackSequence(self)
+                end,
+		},
+		R_GatlingGun = Class(TDFRiotWeapon) {
+                PlayFxWeaponUnpackSequence = function(self)
+                    if not self.SpinManip then 
+                        self.SpinManip = CreateRotator(self.unit, 'R_Gatling_Rotate1', 'z', nil, 270, 180, 60)
+                        self.unit.Trash:Add(self.SpinManip)
+						self.SpinManip2 = CreateRotator(self.unit, 'R_Gatling_Rotate2', 'z', nil, 270, 180, 60)
+						self.unit.Trash:Add(self.SpinManip2)
+                    end
+                    if self.SpinManip then
+                        self.SpinManip:SetTargetSpeed(270)
+                    end
+					if self.SpinManip2 then
+                        self.SpinManip2:SetTargetSpeed(270)
+                    end
+                    TDFRiotWeapon.PlayFxWeaponUnpackSequence(self)
+                end,
+
+                PlayFxWeaponPackSequence = function(self)
+                    if self.SpinManip then
+                        self.SpinManip:SetTargetSpeed(0)
+                    end
+					if self.SpinManip2 then
+                        self.SpinManip2:SetTargetSpeed(0)
+                    end
                     TDFRiotWeapon.PlayFxWeaponPackSequence(self)
                 end,
 		},
 		Heavy_Gauss_Left = Class(TDFGaussCannonWeapon) {},
 		Heavy_Gauss_Right = Class(TDFGaussCannonWeapon) {},
-		BackHeavy_Gauss = Class(TDFGaussCannonWeapon) {},
+		R_Gauss = Class(TDFGaussCannonWeapon) {},
+		L_Gauss = Class(TDFGaussCannonWeapon) {},
 		Light_Gauss = Class(TDFGaussCannonWeapon) {},
         OverCharge = Class(TDFOverchargeWeapon) {
 
@@ -197,17 +233,16 @@ UEL0002 = Class(ACUUnit) {
         self:HideBone('Right_Upgrade', true)
         self:HideBone('Left_Upgrade', true)
 		self:HideBone('L_G_Upgrade', true)
+		self:HideBone('L_Gatling_Upgrade', true)
+		self:HideBone('R_Gatling_Upgrade', true)
+		self:HideBone('Art_Turret_Upgrade', true)
+		self:HideBone('G_Turret_Upgrade', true)
         self:HideBone('R_G_Upgrade', true)
 		self:HideBone('TML_Upgrade', true)
-		self:HideBone('Shield_Upgrade', true)
 		self:HideBone('Back_Upgrade_B01', true)
         self:HideBone('Back_Upgrade_B02', true)
 		self:HideBone('Back_Upgrade_B03', true)
         self:HideBone('Back_Upgrade_B04', true)
-		self:HideBone('Back_Upgrade_B05', true)
-        self:HideBone('Back_Upgrade_B06', true)
-		self:HideBone('Left_Arm_Upgrade', true)
-        self:HideBone('Right_Arm_Upgrade', true)
         self:SetupBuildBones()
         self.HasLeftPod = false
         self.HasRightPod = false
@@ -277,8 +312,10 @@ UEL0002 = Class(ACUUnit) {
         self:SetWeaponEnabledByLabel('Zephyr', true)
 		self:SetWeaponEnabledByLabel('Heavy_Gauss_Right', false)
 		self:SetWeaponEnabledByLabel('Heavy_Gauss_Left', false)
-		self:SetWeaponEnabledByLabel('BackHeavy_Gauss', false)
-		self:SetWeaponEnabledByLabel('BackGatlingGun', false)
+		self:SetWeaponEnabledByLabel('L_Gauss', false)
+		self:SetWeaponEnabledByLabel('R_Gauss', false)
+		self:SetWeaponEnabledByLabel('L_GatlingGun', false)
+		self:SetWeaponEnabledByLabel('R_GatlingGun', false)
 		self:SetWeaponEnabledByLabel('R_Light_Artillery', false)
 		self:SetWeaponEnabledByLabel('L_Light_Artillery', false)
 		self:SetWeaponEnabledByLabel('Med_Artillery', false)
@@ -307,15 +344,16 @@ UEL0002 = Class(ACUUnit) {
         self:HideBone('Right_Upgrade', true)
         self:HideBone('Left_Upgrade', true)
 		self:HideBone('L_G_Upgrade', true)
+		self:HideBone('L_Gatling_Upgrade', true)
+		self:HideBone('R_Gatling_Upgrade', true)
+		self:HideBone('Art_Turret_Upgrade', true)
+		self:HideBone('G_Turret_Upgrade', true)
         self:HideBone('R_G_Upgrade', true)
 		self:HideBone('TML_Upgrade', true)
-		self:HideBone('Shield_Upgrade', true)
 		self:HideBone('Back_Upgrade_B01', true)
         self:HideBone('Back_Upgrade_B02', true)
 		self:HideBone('Back_Upgrade_B03', true)
         self:HideBone('Back_Upgrade_B04', true)
-		self:HideBone('Back_Upgrade_B05', true)
-        self:HideBone('Back_Upgrade_B06', true)
         self:SetUnSelectable(false)
         self:SetBusy(false)
         self:SetBlockCommandQueue(false)
@@ -422,7 +460,7 @@ UEL0002 = Class(ACUUnit) {
         elseif enh =='HeavyGaussCannonRightRemove' then
             self:SetWeaponEnabledByLabel('Heavy_Gauss_Right', false)
 		elseif enh =='MissileLauncherLeft' then
-            self:SetWeaponEnabledByLabel('Missile_Pod_left', true)
+            self:SetWeaponEnabledByLabel('Missile_Pod_Left', true)
         elseif enh =='MissileLauncherLeftRemove' then
             self:SetWeaponEnabledByLabel('Missile_Pod_Left', false)
 		elseif enh =='MissileLauncherRight' then
@@ -453,15 +491,20 @@ UEL0002 = Class(ACUUnit) {
             self:SetWeaponEnabledByLabel('H_Artillery', true)
         elseif enh =='HeavyArtilleryRemove' then
             self:SetWeaponEnabledByLabel('H_Artillery', false)
-		elseif enh =='Back_Gatling' then
-            self:SetWeaponEnabledByLabel('BackGatlingGun', true)
-        elseif enh =='Back_GatlingRemove' then
-            self:SetWeaponEnabledByLabel('BackGatlingGun', false)
-		elseif enh =='Back_HeavyGauss' then
-            self:SetWeaponEnabledByLabel('BackHeavy_Gauss', true)
-        elseif enh =='Back_HeavyGaussRemove' then
-            self:SetWeaponEnabledByLabel('BackHeavy_Gauss', false)
-        #ResourceAllocation              
+		elseif enh =='GatlingLeft' then
+            self:SetWeaponEnabledByLabel('L_GatlingGun', true)
+        elseif enh =='GatlingLeftRemove' then
+            self:SetWeaponEnabledByLabel('L_GatlingGun', false)
+		elseif enh =='GatlingRight' then
+            self:SetWeaponEnabledByLabel('R_GatlingGun', true)
+        elseif enh =='GatlingRightRemove' then
+            self:SetWeaponEnabledByLabel('R_GatlingGun', false)
+		elseif enh =='Gauss_Turrets' then
+            self:SetWeaponEnabledByLabel('L_Gauss', true)
+			self:SetWeaponEnabledByLabel('R_Gauss', true)
+        elseif enh =='Gauss_TurretsRemove' then
+            self:SetWeaponEnabledByLabel('L_Gauss', false)   
+            self:SetWeaponEnabledByLabel('R_Gauss', false)  			
         elseif enh =='TacticalMissile' then
             self:SetWeaponEnabledByLabel('TacMissile', true)
         elseif enh == 'TacticalMissileRemove' then
