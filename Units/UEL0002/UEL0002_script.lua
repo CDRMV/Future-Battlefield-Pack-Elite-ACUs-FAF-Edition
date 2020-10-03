@@ -244,8 +244,6 @@ UEL0002 = Class(ACUUnit) {
 		self:HideBone('Back_Upgrade_B03', true)
         self:HideBone('Back_Upgrade_B04', true)
         self:SetupBuildBones()
-        self.HasLeftPod = false
-        self.HasRightPod = false
         # Restrict what enhancements will enable later
         self:AddBuildRestriction( categories.UEF * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
     end,

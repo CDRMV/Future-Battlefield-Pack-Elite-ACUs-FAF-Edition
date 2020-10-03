@@ -188,8 +188,8 @@ UnitBlueprint {
                 Effects = {
                     {
                         Bones = {
-                            'Left_Arm_B02',
-                            'Right_Arm_B02',
+                            'Left_Barrel',
+                            'Right_Barrel',
                             'Left_Arm_Muzzle',
                             'Right_Arm_Muzzle',
                         },
@@ -276,13 +276,14 @@ UnitBlueprint {
         SpawnRandomRotation = true,
         TransportAnimation = {
             {
-                Animation = '/units/UEL0001/UEL0001_afold.sca',
+                Animation = '/mods/Future Battlefield Pack Elite ACUs FAF Edition/Units/Uel0002/UEL0002_Afold.sca',
                 Weight = 100,
             },
         },
         TransportDropAnimation = {
             {
-                Animation = '/units/UEL0001/UEL0001_aunfold.sca',
+                Animation = '/mods/Future Battlefield Pack Elite ACUs FAF Edition/Units/Uel0002/UEL0002_aunfold.sca',
+				AnimationRate = 0.1,
                 Weight = 100,
             },
         },
@@ -318,7 +319,7 @@ UnitBlueprint {
             Name = '<LOC enhancements_0039>Nano-Repair System',
             NewRegenRate = 200,
             ShowBones = {
-                'Shield_Upgrade',
+                'Back_Upgrade_B03',
             },
             Slot = 'Back',
             UpgradeEffectBones = {
@@ -336,7 +337,7 @@ UnitBlueprint {
             BuildCostMass = 1,
             BuildTime = 0.1,
             HideBones = {
-                'Shield_Upgrade',
+                'Back_Upgrade_B03',
             },
             Icon = 'dsu',
             Name = '<LOC enhancements_0040>Remove Nano-Repair System',
@@ -898,11 +899,11 @@ UnitBlueprint {
             MaintenanceConsumptionPerSecondEnergy = 10000,
             Name = '<LOC enhancements_0059>Personal Teleporter',
             ShowBones = {
-                'Shield_Upgrade',
+                'Back_Upgrade_B03',
             },
             Slot = 'Back',
             UpgradeEffectBones = {
-                'Shield_Upgrade',
+                'Back_Upgrade_B03',
             },
             UpgradeUnitAmbientBones = {
                 'UEL0001',
@@ -913,7 +914,7 @@ UnitBlueprint {
             BuildCostMass = 1,
             BuildTime = 0.1,
             HideBones = {
-                'Shield_Upgrade',
+                'Back_Upgrade_B03',
             },
             Icon = 'pqt',
             Name = '<LOC enhancements_0060>Remove Personal Teleporter',
@@ -1157,7 +1158,6 @@ UnitBlueprint {
             TargetRestrictDisallow = 'UNTARGETABLE',
             TrackingRadius = 1.15,
 			TurretBoneMuzzle = 'L_Art_Muzzle',
-			TurretBoneRecoil = 'L_Art_Muzzle',
             TurretBonePitch = 'L_Art_Barrel',
             TurretDualManipulators = false,
             TurretBoneYaw = 'L_Art_Turret',
@@ -1231,7 +1231,6 @@ UnitBlueprint {
             TrackingRadius = 1.15,
             TurretDualManipulators = false,
 			TurretBoneMuzzle = 'R_Art_Muzzle',
-			TurretBoneRecoil = 'R_Art_Muzzle',
             TurretBonePitch = 'R_Art_Barrel',
             TurretDualManipulators = false,
             TurretBoneYaw = 'R_Art_Turret',
@@ -1246,7 +1245,7 @@ UnitBlueprint {
         },
 		{
             AboveWaterTargetsOnly = true,
-            AimsStraightOnDisable = true,
+            AimsStraightOnDisable = false,
             ArtilleryShieldBlocks = true,
             Audio = {
                 Fire = Sound {
@@ -1324,7 +1323,7 @@ UnitBlueprint {
         },
 		{
 		    AboveWaterFireOnly = true,
-			AimsStraightOnDisable = true,
+			AimsStraightOnDisable = false,
             AboveWaterTargetsOnly = true,
             Audio = {
                 Fire = Sound {
@@ -1403,7 +1402,7 @@ UnitBlueprint {
         },
 		{
 		    AboveWaterFireOnly = true,
-			AimsStraightOnDisable = true,
+			AimsStraightOnDisable = false,
             AboveWaterTargetsOnly = true,
             Audio = {
                 Fire = Sound {
@@ -1480,7 +1479,7 @@ UnitBlueprint {
         },
 		{
 		    AboveWaterFireOnly = true,
-			AimsStraightOnDisable = true,
+			AimsStraightOnDisable = false,
             AboveWaterTargetsOnly = true,
             Audio = {
                 Fire = Sound {
@@ -1549,76 +1548,6 @@ UnitBlueprint {
             TurretPitchSpeed = 90,
             TurretYaw = 0,
             TurretYawRange = 10,
-            TurretYawSpeed = 90,
-            Turreted = true,
-            WeaponCategory = 'Direct Fire',
-            WeaponRepackTimeout = 1,
-            WeaponUnpacks = true,
-        },
-		{
-		    AboveWaterFireOnly = true,
-            AboveWaterTargetsOnly = true,
-            Audio = {
-                Fire = Sound {
-                    Bank = 'UELWeapon',
-                    Cue = 'UEB4201_Phalanx_01',
-                    LodCutoff = 'Weapon_LodCutoff',
-                },
-            },
-            BallisticArc = 'RULEUBA_LowArc',
-            CollideFriendly = false,
-            Damage = 13.5,
-            DamageType = 'Normal',
-            DisplayName = 'Zephyr Anti Matter Cannon',
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Seabed = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
-            FiringTolerance = 2,
-            Label = 'BackGatlingGun',
-            MaxRadius = 22,
-            MinRadius = 1,
-            MuzzleSalvoDelay = 0,
-            MuzzleSalvoSize = 1,
-            MuzzleVelocity = 35,
-            ProjectileId = '/projectiles/TDFRiot02/TDFRiot02_proj.bp',
-            ProjectileLifetimeUsesMultiplier = 2,
-            RackBones = {
-                {
-                    MuzzleBones = {
-                        'Gatling_Muzzle',
-                    },
-                    RackBone = 'Gatling_Rotate',
-                },
-            },
-            RackRecoilDistance = 0,
-            RackReloadTimeout = 10,
-            RackSalvoChargeTime = 0,
-            RackSalvoReloadTime = 0,
-            RackSalvoSize = 1,
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_DirectFire',
-            RateOfFire = 3,
-            SlavedToBody = false,
-            TargetCheckInterval = 0.5,
-            TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE',
-                'STRUCTURE DEFENSE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE',
-            TurretBoneMuzzle = 'Gatling_Muzzle',
-            TurretBonePitch = 'Gatling_Barrel',
-            TurretBoneYaw = 'Gatling_Barrel',
-            TurretDualManipulators = false,
-            TurretPitch = 0,
-            TurretPitchRange = 90,
-            TurretPitchSpeed = 90,
-            TurretYaw = 0,
-            TurretYawRange = 15,
             TurretYawSpeed = 90,
             Turreted = true,
             WeaponCategory = 'Direct Fire',
@@ -1863,7 +1792,6 @@ UnitBlueprint {
             DamageType = 'Normal',
             DisplayName = 'Flayer SAM Launcher',
             FireTargetLayerCapsTable = {
-                Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
@@ -1873,7 +1801,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 12,
             MuzzleVelocity = 10,
-			PrefersPrimaryWeaponTarget = true,
+			PrefersPrimaryWeaponTarget = false,
             ProjectileId = '/projectiles/TAAMissileFlayer01/TAAMissileFlayer01_proj.bp',
             ProjectileLifetime = 20,
             ProjectilesPerOnFire = 12,
@@ -1940,7 +1868,6 @@ UnitBlueprint {
             DamageType = 'Normal',
             DisplayName = 'Flayer SAM Launcher',
             FireTargetLayerCapsTable = {
-                Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
@@ -1950,7 +1877,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 4,
             MuzzleVelocity = 10,
-			PrefersPrimaryWeaponTarget = true,
+			PrefersPrimaryWeaponTarget = false,
             ProjectileId = '/projectiles/TAAMissileFlayer01/TAAMissileFlayer01_proj.bp',
             ProjectileLifetime = 20,
             ProjectilesPerOnFire = 4,
@@ -2010,7 +1937,6 @@ UnitBlueprint {
             DamageType = 'Normal',
             DisplayName = 'Flayer SAM Launcher',
             FireTargetLayerCapsTable = {
-                Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
@@ -2020,7 +1946,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 4,
             MuzzleVelocity = 10,
-			PrefersPrimaryWeaponTarget = true,
+			PrefersPrimaryWeaponTarget = false,
             ProjectileId = '/projectiles/TAAMissileFlayer01/TAAMissileFlayer01_proj.bp',
             ProjectileLifetime = 20,
             ProjectilesPerOnFire = 4,
