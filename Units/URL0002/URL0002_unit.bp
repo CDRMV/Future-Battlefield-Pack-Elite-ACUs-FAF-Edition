@@ -259,7 +259,7 @@ UnitBlueprint {
         },
         TransportDropAnimation = {
             {
-                Animation = '/units/URL0001/URL0001_aunfold.sca',
+                Animation = '/mods/Future Battlefield Pack Elite ACUs FAF Edition/units/URL0002/URL0002_aunfold.sca',
                 Weight = 100,
             },
         },
