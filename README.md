@@ -22,3 +22,15 @@ Todos before first Release:
 - Add a Special Feature (FAF Version only)
 - Replace few Icons with new ones
 - Balance 
+
+Important:
+
+Please Remember that this is an Early Access of this Mod.
+
+So it is not the final Release. 
+
+It is not allowed to Upload it somewhere without my permission.
+
+Only official Releases can be uploaded by someone in the future. 
+
+But you will need my permission for that first of course. 
