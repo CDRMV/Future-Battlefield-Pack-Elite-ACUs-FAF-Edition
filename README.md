@@ -1,6 +1,18 @@
 # Future Battlefield Pack Elite ACUs (FAF Edition)
 'Future Battlefield Pack: Elite ACUS' is a Submod for F.B.P.:Legends It adds the ACU-HQ and three new ACU Classes into the Game. This is for the FAF Version of the Game.
 
+Important:
+
+Please Remember that this is an Early Access of this Mod.
+
+So it is not the final Release.
+
+It is not allowed to Upload it somewhere without my permission.
+
+Only official Releases can be uploaded by someone in the future.
+
+But you will need my permission for that first of course.
+
 Install Instructions:
 
 1) Download the Zip File
@@ -23,14 +35,3 @@ Todos before first Release:
 - Replace few Icons with new ones
 - Balance 
 
-Important:
-
-Please Remember that this is an Early Access of this Mod.
-
-So it is not the final Release. 
-
-It is not allowed to Upload it somewhere without my permission.
-
-Only official Releases can be uploaded by someone in the future. 
-
-But you will need my permission for that first of course. 
